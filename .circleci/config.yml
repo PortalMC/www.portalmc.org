@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: portalmc/web-builder
+    steps:
+      - checkout
+      - add_ssh_keys
+      - run: ./deploy/scripts/deploy_production.sh
