@@ -1,0 +1,50 @@
+# Project information
+site_name: Portal
+site_description: 'Minecraft Mod development within the browser.'
+site_author: 'Ralph'
+site_url: 'https://www.portalmc.org'
+
+# Repository
+repo_name: 'PortalMC/Portal'
+repo_url: 'https://github.com/PortalMC/Portal'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 Tamaki Hidetsugu (Ralph)'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  logo:
+    icon: 'cloud'
+  feature:
+    tabs: true
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/r-ralph'
+    - type: 'twitter'
+      link: 'https://twitter.com/r_ralph_h'
+    - type: 'globe'
+      link: 'https://ralph.ms'
+
+# Google Analytics
+
+google_analytics:
+  - 'UA-110173361-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false

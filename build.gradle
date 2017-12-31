@@ -1,0 +1,124 @@
+import com.sun.org.apache.xml.internal.serialize.OutputFormat
+import com.sun.org.apache.xml.internal.serialize.XMLSerializer
+import org.gradle.internal.os.OperatingSystem
+import org.w3c.dom.Document
+import org.w3c.dom.Node
+import org.w3c.dom.NodeList
+
+import javax.xml.parsers.DocumentBuilder
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.xpath.XPath
+import javax.xml.xpath.XPathConstants
+import javax.xml.xpath.XPathExpression
+import javax.xml.xpath.XPathFactory
+import java.nio.file.Files
+
+task build {
+    doLast {
+        build()
+    }
+}
+
+def build() {
+    File[] dirs = new File("${project.rootDir}/src/sites").listFiles()
+    List<File> sites = new ArrayList<>()
+    for (File f : dirs) {
+        if (!f.isDirectory()) continue
+        sites.add(f)
+    }
+    for (File f : sites) {
+        println("Building site for '${f.name}'")
+        buildSite(f.name)
+    }
+    def docsDirPath = new File("${project.rootDir}/public").toPath()
+    def docsTempDirPath = new File("${project.rootDir}/public_tmp").toPath()
+    docsTempDirPath.toFile().deleteDir()
+    println("Deleting previous output dir...")
+    Files.createDirectory(docsTempDirPath)
+    if (Files.exists(docsDirPath.resolve(".git"))) {
+        Files.move(docsDirPath.resolve(".git"), docsTempDirPath.resolve(".git"))
+    }
+    if (Files.exists(docsDirPath.resolve("CNAME"))) {
+        Files.move(docsDirPath.resolve("CNAME"), docsTempDirPath.resolve("CNAME"))
+    }
+    docsDirPath.toFile().deleteDir()
+    println("Moving artifact to output dir...")
+    def defaultSiteDir = new File("${project.rootDir}/src/sites/default/site").toPath()
+    println("  Moving 'default'")
+    Files.move(defaultSiteDir, docsDirPath)
+    def docsSitemapPath = docsDirPath.resolve("sitemap.xml")
+    for (File f : sites) {
+        if (f.name == "default") continue
+        def sitePath = f.toPath().resolve("site")
+        println("  Moving '${f.name}'")
+        println("    Deleting duplicated assets")
+        sitePath.resolve("assets").deleteDir()
+        sitePath.resolve("search").deleteDir()
+        println("    Merging sitemap")
+        def sitemapPath = sitePath.resolve("sitemap.xml")
+        mergeXml(sitemapPath, docsSitemapPath)
+        Files.delete(sitemapPath)
+        Files.move(sitePath, docsDirPath.resolve(f.name))
+    }
+    if (Files.exists(docsTempDirPath.resolve(".git"))) {
+        Files.move(docsTempDirPath.resolve(".git"), docsDirPath.resolve(".git"))
+    }
+    if (Files.exists(docsTempDirPath.resolve("CNAME"))) {
+        Files.move(docsTempDirPath.resolve("CNAME"), docsDirPath.resolve("CNAME"))
+    }
+    docsTempDirPath.toFile().deleteDir()
+}
+
+def buildSite(String name) {
+    if (isWindows()) {
+        runCommand("cd /d \"${project.rootDir}/src/sites/$name/\" & mkdocs build")
+    } else {
+        runCommand("cd \"${project.rootDir}/src/sites/$name/\"; mkdocs build")
+    }
+}
+
+static def runCommand(String commandRaw) {
+    def command
+    if (isWindows()) {
+        command = ["cmd", "/c", "\"$commandRaw\""]
+    } else {
+        command = ["sh", "-c", commandRaw]
+    }
+    def p = command.execute()
+    BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()))
+    String line
+    while ((line = reader.readLine()) != null) {
+        println(line)
+    }
+    def exitValue = p.waitFor()
+    if (exitValue != 0) {
+        throw new RuntimeException("An error has occurred while running command. ${p.err.text}")
+    }
+}
+
+static def mergeXml(java.nio.file.Path source, java.nio.file.Path base) {
+    DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+    Document baseXml = builder.parse(base.newInputStream())
+    Document importXml = builder.parse(source.newInputStream())
+
+    XPath xpath = XPathFactory.newInstance().newXPath()
+    XPathExpression ex = xpath.compile("/*/*")
+    NodeList importXmlNodeList = (NodeList) ex.evaluate(importXml, XPathConstants.NODESET)
+
+    Node rootNode = baseXml.getDocumentElement()
+    for (int i = 0; i < importXmlNodeList.getLength(); i++) {
+        Node importNode = baseXml.importNode(importXmlNodeList.item(i), true) as Node
+        rootNode.appendChild(importNode)
+    }
+
+    OutputFormat format = new OutputFormat(baseXml)
+    format.setIndenting(true)
+    format.setIndent(2)
+    Writer out = new FileWriter(base.toFile())
+    XMLSerializer serializer = new XMLSerializer(out, format)
+    serializer.serialize(baseXml)
+}
+
+static def isWindows() {
+    return OperatingSystem.current().isWindows()
+}
