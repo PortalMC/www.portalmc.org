@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.portalmc.org/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/user-manual/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/user-manual/installation/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/ja/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/ja/user-manual/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/ja/user-manual/installation/</loc>
+    <lastmod>2017-12-31</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>

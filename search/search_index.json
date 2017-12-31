@@ -1,0 +1,24 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "About Portal\n\n\nWIP",
+            "title": "About Portal"
+        },
+        {
+            "location": "/#about-portal",
+            "text": "WIP",
+            "title": "About Portal"
+        },
+        {
+            "location": "/user-manual/",
+            "text": "",
+            "title": "Home"
+        },
+        {
+            "location": "/user-manual/installation/",
+            "text": "WIP",
+            "title": "Installation"
+        }
+    ]
+}
