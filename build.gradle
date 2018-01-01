@@ -35,6 +35,9 @@ def build() {
     def docsTempDirPath = new File("${project.rootDir}/public_tmp").toPath()
     docsTempDirPath.toFile().deleteDir()
     println("Deleting previous output dir...")
+    if (!Files.exists(docsDirPath)) {
+        Files.createDirectory(docsDirPath)
+    }
     Files.createDirectory(docsTempDirPath)
     if (Files.exists(docsDirPath.resolve(".git"))) {
         Files.move(docsDirPath.resolve(".git"), docsTempDirPath.resolve(".git"))
