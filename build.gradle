@@ -42,9 +42,6 @@ def build() {
     if (Files.exists(docsDirPath.resolve(".git"))) {
         Files.move(docsDirPath.resolve(".git"), docsTempDirPath.resolve(".git"))
     }
-    if (Files.exists(docsDirPath.resolve("CNAME"))) {
-        Files.move(docsDirPath.resolve("CNAME"), docsTempDirPath.resolve("CNAME"))
-    }
     for (File f : docsDirPath.toFile().listFiles()) {
         if (f.isDirectory()) {
             f.deleteDir()
@@ -74,9 +71,6 @@ def build() {
     }
     if (Files.exists(docsTempDirPath.resolve(".git"))) {
         Files.move(docsTempDirPath.resolve(".git"), docsDirPath.resolve(".git"))
-    }
-    if (Files.exists(docsTempDirPath.resolve("CNAME"))) {
-        Files.move(docsTempDirPath.resolve("CNAME"), docsDirPath.resolve("CNAME"))
     }
     docsTempDirPath.toFile().deleteDir()
 }

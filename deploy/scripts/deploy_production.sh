@@ -25,12 +25,12 @@ else
   cd public
   git checkout -b gh-pages
   git remote add origin "${GIT_REPO}"
-  echo www.portalmc.org > CNAME
   cd ..
 fi
 
 ./gradlew build
 cd public
+echo www.portalmc.org > CNAME
 git config --global user.name "${GIT_USER_NAME}"
 git config --global user.email "${GIT_USER_EMAIL}"
 git add --all
