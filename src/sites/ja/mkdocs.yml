@@ -36,6 +36,9 @@ extra:
       link: 'https://twitter.com/r_ralph_h'
     - type: 'globe'
       link: 'https://ralph.ms'
+  localize:
+    - original: "User manual"
+      title: "ユーザーマニュアル"
 
 # Google Analytics
 
@@ -48,7 +51,3 @@ markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: false
-
-extra:
-    base_url: 'http://test.com'
-    some_var: 'test variable'
