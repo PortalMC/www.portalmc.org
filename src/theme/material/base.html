@@ -185,7 +185,9 @@
       {% endif %}
       <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:""}})</script>
       {% for path in extra_javascript %}
-        <script src="{{ path[1:] }}"></script>
+        {% set path_arr = path.split(".") %}
+        {% set path_arr_count = path_arr | count %}
+        <script src="{{ path_arr[path_arr_count - 2] }}.{{ path_arr[path_arr_count - 1] }}"></script>
       {% endfor %}
     {% endblock %}
     {% block analytics %}
