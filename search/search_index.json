@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "About Portal\n\n\nWIP",
-            "title": "About Portal"
+            "text": "Home\n\n\nWIP",
+            "title": "Home"
         },
         {
-            "location": "/#about-portal",
+            "location": "/#home",
             "text": "WIP",
-            "title": "About Portal"
+            "title": "Home"
         },
         {
             "location": "/user-manual/",
