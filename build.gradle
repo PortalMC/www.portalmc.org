@@ -62,7 +62,6 @@ def build() {
         println("  Moving '${f.name}'")
         println("    Deleting duplicated assets")
         sitePath.resolve("assets").deleteDir()
-        sitePath.resolve("search").deleteDir()
         println("    Merging sitemap")
         def sitemapPath = sitePath.resolve("sitemap.xml")
         mergeXml(sitemapPath, docsSitemapPath)

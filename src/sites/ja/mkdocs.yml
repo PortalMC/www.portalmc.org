@@ -36,14 +36,18 @@ extra:
       link: 'https://twitter.com/r_ralph_h'
     - type: 'globe'
       link: 'https://ralph.ms'
+  search:
+    language: 'jp'
   localize:
     - original: "User manual"
       title: "ユーザーマニュアル"
     - original: "Installation"
       title: "インストール"
 
-# Google Analytics
+extra_javascript:
+  - "assets/javascripts/site-ja.js"
 
+# Google Analytics
 google_analytics:
   - 'UA-110173361-X'
   - 'auto'

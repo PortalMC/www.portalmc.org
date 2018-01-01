@@ -37,8 +37,10 @@ extra:
     - type: 'globe'
       link: 'https://ralph.ms'
 
-# Google Analytics
+extra_javascript:
+  - "assets/javascripts/site.js"
 
+# Google Analytics
 google_analytics:
   - 'UA-110173361-X'
   - 'auto'
