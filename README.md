@@ -7,8 +7,12 @@ The webpage repository of www.portalmc.org.
 ### Watch changes and run server
 
 ```
-cd src/sites/**
-mkdocs serve
+./gradlew build -t
+# Ctrl-D to stop
+
+# in other terminal
+cd public
+python3 -m http.server
 ```
 
 ### Build pages for gh-pages

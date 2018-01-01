@@ -14,6 +14,7 @@ import javax.xml.xpath.XPathFactory
 import java.nio.file.Files
 
 task build {
+    inputs.files files("src/sites")
     doLast {
         build()
     }
@@ -41,11 +42,19 @@ def build() {
     if (Files.exists(docsDirPath.resolve("CNAME"))) {
         Files.move(docsDirPath.resolve("CNAME"), docsTempDirPath.resolve("CNAME"))
     }
-    docsDirPath.toFile().deleteDir()
+    for (File f : docsDirPath.toFile().listFiles()) {
+        if (f.isDirectory()) {
+            f.deleteDir()
+        } else {
+            f.delete()
+        }
+    }
     println("Moving artifact to output dir...")
     def defaultSiteDir = new File("${project.rootDir}/src/sites/default/site").toPath()
     println("  Moving 'default'")
-    Files.move(defaultSiteDir, docsDirPath)
+    for (File f : defaultSiteDir.toFile().listFiles()) {
+        Files.move(f.toPath(), docsDirPath.resolve(f.name))
+    }
     def docsSitemapPath = docsDirPath.resolve("sitemap.xml")
     for (File f : sites) {
         if (f.name == "default") continue
