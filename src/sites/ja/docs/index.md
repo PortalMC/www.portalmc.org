@@ -1,3 +1,3 @@
-# About Portal
+# ホーム
 
 WIP

@@ -1,3 +1,5 @@
+# インストール
+
 ## Portal Coremod の導入
 
 Portal では、Web 上で作成・コンパイルした Mod を、実際の Minecraft にダウンロードして実行します。

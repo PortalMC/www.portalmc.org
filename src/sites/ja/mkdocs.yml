@@ -39,6 +39,8 @@ extra:
   localize:
     - original: "User manual"
       title: "ユーザーマニュアル"
+    - original: "Installation"
+      title: "インストール"
 
 # Google Analytics
 
