@@ -183,7 +183,7 @@
           {% endif %}
         {% endif %}
       {% endif %}
-      <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:""}})</script>
+      <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:"{{ config.extra.path.prefix }}"}})</script>
       {% for path in extra_javascript %}
         {% set path_arr = path.split(".") %}
         {% set path_arr_count = path_arr | count %}

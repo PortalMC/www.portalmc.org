@@ -38,6 +38,8 @@ extra:
       link: 'https://ralph.ms'
   search:
     language: 'jp'
+  path:
+    prefix: "/ja"
   localize:
     - original: "User manual"
       title: "ユーザーマニュアル"
