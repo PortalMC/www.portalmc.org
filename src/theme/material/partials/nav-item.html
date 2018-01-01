@@ -2,6 +2,15 @@
 {% if nav_item.active %}
   {% set class = "md-nav__item md-nav__item--active" %}
 {% endif %}
+{% set localized_title = [nav_item.title] %}
+{% if config.extra.localize %}
+  {% for localize in config.extra.localize %}
+    {% if localize.original == nav_item.title %}
+      {% set _ = localized_title.pop() %}
+      {% set _ = localized_title.append(localize.title) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 {% if nav_item.children %}
   <li class="{{ class }} md-nav__item--nested">
     {% if nav_item.active %}
@@ -10,11 +19,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}">
     {% endif %}
     <label class="md-nav__link" for="{{ path }}">
-      {{ nav_item.title }}
+      {{ localized_title[0] }}
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ level }}">
       <label class="md-nav__title" for="{{ path }}">
-        {{ nav_item.title }}
+        {{ localized_title[0] }}
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         {% set base = path %}
@@ -35,11 +44,11 @@
     {% endif %}
     {% if toc_ | first is defined %}
       <label class="md-nav__link md-nav__link--active" for="toc">
-        {{ nav_item.title }}
+        {{ localized_title[0] }}
       </label>
     {% endif %}
     <a href="{{ nav_item.url }}" title="{{ nav_item.title }}" class="md-nav__link md-nav__link--active">
-      {{ nav_item.title }}
+      {{ localized_title[0] }}
     </a>
     {% if toc_ | first is defined %}
       {% include "partials/toc.html" %}
@@ -48,7 +57,7 @@
 {% else %}
   <li class="{{ class }}">
     <a href="{{ nav_item.url }}" title="{{ nav_item.title }}" class="md-nav__link">
-      {{ nav_item.title }}
+      {{ localized_title[0] }}
     </a>
   </li>
 {% endif %}
