@@ -15,7 +15,7 @@ copyright: 'Copyright &copy; 2017 Tamaki Hidetsugu (Ralph)'
 theme:
   name: null
   custom_dir: 'material'
-  language: 'en'
+  language: 'ja'
   palette:
     primary: 'indigo'
     accent: 'indigo'
