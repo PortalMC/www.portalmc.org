@@ -47,7 +47,7 @@ extra:
       title: "インストール"
 
 extra_javascript:
-  - "assets/javascripts/site-ja.js"
+  - "assets/javascripts/site.js"
 
 # Google Analytics
 google_analytics:
