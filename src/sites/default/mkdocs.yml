@@ -34,13 +34,16 @@ extra:
       link: 'https://github.com/r-ralph'
     - type: 'twitter'
       link: 'https://twitter.com/r_ralph_h'
-    - type: 'globe'
+    - type: 'home'
       link: 'https://ralph.ms'
   path:
     prefix: ""
 
 extra_javascript:
   - "assets/javascripts/site.js"
+
+extra_css:
+  - "assets/stylesheets/site.css"
 
 # Google Analytics
 google_analytics:

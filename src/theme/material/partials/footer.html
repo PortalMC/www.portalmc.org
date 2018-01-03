@@ -52,9 +52,14 @@
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
-      {% block social %}
-        {% include "partials/social.html" %}
-      {% endblock %}
+      <div class="md-footer-social-language-trigger">
+        {% block social %}
+          {% include "partials/social.html" %}
+        {% endblock %}
+        {% block language_trigger %}
+          {% include "partials/language-trigger.html" %}
+        {% endblock %}
+      </div>
     </div>
   </div>
 </footer>
