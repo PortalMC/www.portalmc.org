@@ -31,6 +31,6 @@
     });
 
     function changeLanguage(prefix) {
-        window.location.href = window.location.protocol + "//" + window.location.host + prefix
+        window.location.pathname = prefix + window.location.pathname.substring(current_language_prefix.length);
     }
 })();
