@@ -45,6 +45,8 @@ extra:
       title: "ユーザーマニュアル"
     - original: "Installation"
       title: "インストール"
+    - original: "Hosting"
+      title: "ホスティング"
 
 extra_javascript:
   - "assets/javascripts/site.js"
