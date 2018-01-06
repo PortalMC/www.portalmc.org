@@ -26,6 +26,16 @@ theme:
   feature:
     tabs: true
 
+pages:
+  - ホーム: 'index.md'
+  - スクリーンショット:
+    - 'スクリーンショット': 'screenshot/index.md'
+  - ユーザーマニュアル:
+    - 'ユーザーマニュアル': 'user-manual/index.md'
+    - 'インストール': 'user-manual/installation.md'
+  - ホスティング:
+    - 'ホスティング': 'hosting/index.md'
+
 # Customization
 extra:
   social:
