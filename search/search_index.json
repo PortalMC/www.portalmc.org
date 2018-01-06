@@ -11,16 +11,6 @@
             "title": "Home"
         },
         {
-            "location": "/hosting/",
-            "text": "Hosting\n\n\nWIP",
-            "title": "Hosting"
-        },
-        {
-            "location": "/hosting/#hosting",
-            "text": "WIP",
-            "title": "Hosting"
-        },
-        {
             "location": "/screenshot/",
             "text": "Screenshot\n\n\nWIP",
             "title": "Screenshot"
@@ -33,7 +23,7 @@
         {
             "location": "/user-manual/",
             "text": "User manual",
-            "title": "User manual"
+            "title": "Introduction"
         },
         {
             "location": "/user-manual/#user-manual",
@@ -49,6 +39,16 @@
             "location": "/user-manual/installation/#installation",
             "text": "",
             "title": "Installation"
+        },
+        {
+            "location": "/hosting/",
+            "text": "Hosting\n\n\nWIP",
+            "title": "Introduction"
+        },
+        {
+            "location": "/hosting/#hosting",
+            "text": "WIP",
+            "title": "Hosting"
         }
     ]
 }

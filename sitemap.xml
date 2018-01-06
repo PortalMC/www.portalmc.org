@@ -6,11 +6,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.portalmc.org/hosting/</loc>
-    <lastmod>2018-01-06</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://www.portalmc.org/screenshot/</loc>
     <lastmod>2018-01-06</lastmod>
     <changefreq>daily</changefreq>
@@ -26,12 +21,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.portalmc.org/ja/</loc>
+    <loc>https://www.portalmc.org/hosting/</loc>
     <lastmod>2018-01-06</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.portalmc.org/ja/hosting/</loc>
+    <loc>https://www.portalmc.org/ja/</loc>
     <lastmod>2018-01-06</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -47,6 +42,11 @@
   </url>
   <url>
     <loc>https://www.portalmc.org/ja/user-manual/installation/</loc>
+    <lastmod>2018-01-06</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://www.portalmc.org/ja/hosting/</loc>
     <lastmod>2018-01-06</lastmod>
     <changefreq>daily</changefreq>
   </url>
