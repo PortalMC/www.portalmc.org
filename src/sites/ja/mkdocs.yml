@@ -39,15 +39,6 @@ extra:
     language: 'jp'
   path:
     prefix: "/ja"
-  localize:
-    - original: "User manual"
-      title: "ユーザーマニュアル"
-    - original: "Installation"
-      title: "インストール"
-    - original: "Screenshot"
-      title: "スクリーンショット"
-    - original: "Hosting"
-      title: "ホスティング"
 
 extra_javascript:
   - "assets/javascripts/site.js"
