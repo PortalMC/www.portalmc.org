@@ -31,10 +31,10 @@ pages:
   - Screenshot:
     - 'Screenshot': 'screenshot/index.md'
   - User Manual:
-    - 'User Manual': 'user-manual/index.md'
+    - 'Introduction': 'user-manual/index.md'
     - 'Installation': 'user-manual/installation.md'
   - Hosting:
-    - 'Hosting': 'hosting/index.md'
+    - 'Introduction': 'hosting/index.md'
 
 # Customization
 extra:
