@@ -67,6 +67,11 @@ def build() {
         mergeXml(sitemapPath, docsSitemapPath)
         Files.delete(sitemapPath)
         Files.move(sitePath, docsDirPath.resolve(f.name))
+        // Create assets symlink
+        def sourcePath = docsDirPath.resolve("assets")
+        def targetPath = docsDirPath.resolve(f.name).resolve("assets")
+        def relativeSrc = targetPath.getParent().relativize(sourcePath);
+        Files.createSymbolicLink(targetPath, relativeSrc)
     }
     if (Files.exists(docsTempDirPath.resolve(".git"))) {
         Files.move(docsTempDirPath.resolve(".git"), docsDirPath.resolve(".git"))
