@@ -2,22 +2,52 @@
     "docs": [
         {
             "location": "/",
-            "text": "Home\n\n\nWIP",
+            "text": "Home\n\n\n\n\nPortal\n is an open source software that allows you to edit and build minecraft Mod from a web browser.\n\n\nIn addition to using the hosted environment, you can also host your own.\n\n\nFor details on how to prepare for Mod development using Portal, please click \nhere\n.\n\n\nOtherwise, please see \nhere\n for how to prepare for Mod development using Portal.",
             "title": "Home"
         },
         {
             "location": "/#home",
-            "text": "WIP",
+            "text": "Portal  is an open source software that allows you to edit and build minecraft Mod from a web browser.  In addition to using the hosted environment, you can also host your own.  For details on how to prepare for Mod development using Portal, please click  here .  Otherwise, please see  here  for how to prepare for Mod development using Portal.",
             "title": "Home"
+        },
+        {
+            "location": "/hosting/",
+            "text": "Hosting\n\n\nWIP",
+            "title": "Hosting"
+        },
+        {
+            "location": "/hosting/#hosting",
+            "text": "WIP",
+            "title": "Hosting"
+        },
+        {
+            "location": "/screenshot/",
+            "text": "Screenshot\n\n\nWIP",
+            "title": "Screenshot"
+        },
+        {
+            "location": "/screenshot/#screenshot",
+            "text": "WIP",
+            "title": "Screenshot"
         },
         {
             "location": "/user-manual/",
+            "text": "User manual",
+            "title": "User manual"
+        },
+        {
+            "location": "/user-manual/#user-manual",
             "text": "",
-            "title": "Home"
+            "title": "User manual"
         },
         {
             "location": "/user-manual/installation/",
-            "text": "WIP",
+            "text": "Installation",
+            "title": "Installation"
+        },
+        {
+            "location": "/user-manual/installation/#installation",
+            "text": "",
             "title": "Installation"
         }
     ]
