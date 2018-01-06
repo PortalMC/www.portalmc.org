@@ -22,8 +22,7 @@ theme:
   font:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
-  logo:
-    icon: 'cloud'
+  logo: 'assets/images/logo.svg'
   feature:
     tabs: true
 
@@ -45,6 +44,8 @@ extra:
       title: "ユーザーマニュアル"
     - original: "Installation"
       title: "インストール"
+    - original: "Screenshot"
+      title: "スクリーンショット"
     - original: "Hosting"
       title: "ホスティング"
 
