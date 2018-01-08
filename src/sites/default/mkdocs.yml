@@ -35,6 +35,7 @@ pages:
     - 'Installation': 'user-manual/installation.md'
   - Hosting:
     - 'Introduction': 'hosting/index.md'
+    - 'Configuration': 'hosting/configuration.md'
 
 # Customization
 extra:

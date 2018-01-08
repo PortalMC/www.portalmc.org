@@ -35,6 +35,7 @@ pages:
     - 'インストール': 'user-manual/installation.md'
   - ホスティング:
     - 'はじめに': 'hosting/index.md'
+    - '設定': 'hosting/configuration.md'
 
 # Customization
 extra:
