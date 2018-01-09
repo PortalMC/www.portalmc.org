@@ -36,6 +36,7 @@ pages:
   - ホスティング:
     - 'はじめに': 'hosting/index.md'
     - '設定': 'hosting/configuration.md'
+    - 'ストレージ': 'hosting/storage.md'
 
 # Customization
 extra:

@@ -36,6 +36,7 @@ pages:
   - Hosting:
     - 'Introduction': 'hosting/index.md'
     - 'Configuration': 'hosting/configuration.md'
+    - 'Storage': 'hosting/storage.md'
 
 # Customization
 extra:
