@@ -64,6 +64,26 @@
             "location": "/hosting/#_1",
             "text": "WIP",
             "title": "\u30db\u30b9\u30c6\u30a3\u30f3\u30b0"
+        },
+        {
+            "location": "/hosting/configuration/",
+            "text": "\u8a2d\u5b9a",
+            "title": "\u8a2d\u5b9a"
+        },
+        {
+            "location": "/hosting/configuration/#_1",
+            "text": "",
+            "title": "\u8a2d\u5b9a"
+        },
+        {
+            "location": "/hosting/storage/",
+            "text": "\u30b9\u30c8\u30ec\u30fc\u30b8",
+            "title": "\u30b9\u30c8\u30ec\u30fc\u30b8"
+        },
+        {
+            "location": "/hosting/storage/#_1",
+            "text": "",
+            "title": "\u30b9\u30c8\u30ec\u30fc\u30b8"
         }
     ]
 }

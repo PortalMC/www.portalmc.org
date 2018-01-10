@@ -49,6 +49,41 @@
             "location": "/hosting/#hosting",
             "text": "WIP",
             "title": "Hosting"
+        },
+        {
+            "location": "/hosting/configuration/",
+            "text": "Configuration",
+            "title": "Configuration"
+        },
+        {
+            "location": "/hosting/configuration/#configuration",
+            "text": "",
+            "title": "Configuration"
+        },
+        {
+            "location": "/hosting/storage/",
+            "text": "Storage\n\n\nLocal\n\n\nPutting files into local storage.\n\n\nExample:\n\n\n\"Config\": {\n    \"Root\": \"./projectsroot\"\n}\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nRoot\n\n\nstring\n\n\nDirectory path. You can use both absolute and relative path.\n\n\n\n\n\n\n\n\nSamba\n\n\nPutting files into Samba server.\n\n\nExample:\n\n\n\"Config\": {\n\n}\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAzureBlob\n\n\nPutting files into \nAzure Blob storage\n\n\nExample:\n\n\n\"Config\": {\n    \"ConnectionString\": \"DefaultEndpointsProtocol=https;AccountName=[account_name];AccountKey=[account_key];\",\n    \"ProvideMethod\": \"Stream\",\n    \"AccessPolicy\": null\n}\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nConnectionString\n\n\nstring\n\n\nCertification to connect Azure Blob Storage.\n\n\n\n\n\n\nProvideMethod\n\n\nstring\n\n\nStream\n or \nRedirect\n\n\n\n\n\n\nAccessPolicy\n\n\nstring\n\n\nUsed only when \nProvideMethod\n is \nRedirect\n. If defined, SAS url is generated with this policy.",
+            "title": "Storage"
+        },
+        {
+            "location": "/hosting/storage/#storage",
+            "text": "",
+            "title": "Storage"
+        },
+        {
+            "location": "/hosting/storage/#local",
+            "text": "Putting files into local storage.  Example:  \"Config\": {\n    \"Root\": \"./projectsroot\"\n}     Key  Type  Description      Root  string  Directory path. You can use both absolute and relative path.",
+            "title": "Local"
+        },
+        {
+            "location": "/hosting/storage/#samba",
+            "text": "Putting files into Samba server.  Example:  \"Config\": {\n\n}     Key  Type  Description",
+            "title": "Samba"
+        },
+        {
+            "location": "/hosting/storage/#azureblob",
+            "text": "Putting files into  Azure Blob storage  Example:  \"Config\": {\n    \"ConnectionString\": \"DefaultEndpointsProtocol=https;AccountName=[account_name];AccountKey=[account_key];\",\n    \"ProvideMethod\": \"Stream\",\n    \"AccessPolicy\": null\n}     Key  Type  Description      ConnectionString  string  Certification to connect Azure Blob Storage.    ProvideMethod  string  Stream  or  Redirect    AccessPolicy  string  Used only when  ProvideMethod  is  Redirect . If defined, SAS url is generated with this policy.",
+            "title": "AzureBlob"
         }
     ]
 }
